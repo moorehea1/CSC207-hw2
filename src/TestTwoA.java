@@ -19,6 +19,7 @@ public class TestTwoA {
 	} //for
     } //test_isMultiple
 
+    @Test
     void test_isOdd(void) {
 	for (int i = 1; i>1000; i+=2) {
 	    assertEquals("Positive Odd", true, TwoA.isOdd(i));
@@ -36,6 +37,7 @@ public class TestTwoA {
 	// Even numbers are not odd
     } //test_isOdd
     
+    @Test
     void test_oddSumTo(void) {
 	assertEquals("Zero", 0, TwoA.oddSumTo(0));
 	//No positive integers less than 0)
@@ -50,9 +52,9 @@ public class TestTwoA {
 	assertEquals("Standard", 1+3+5+7, TwoA.oddSumTo(9));
 	//Result for an even number should be equal to the odd number above it. Not sure if this would be possible to loop through?
 	} //for
-	
     } //test_oddSumTo
 
+    @Test
     void test_isOddProd (void) {
 	assertEquals("NULL", false, TwoA.isOddProd(new int[] {""}));
 	//Returns false when given a null array
@@ -71,12 +73,18 @@ public class TestTwoA {
 	} //for
     } //test_isOddProd
 
+    @Test
     void test_allDistinct(void) {
-	
+	assertEquals("Sample false", false, TwoA.allDistinct(new int[] {1,2,3,4,5,6,1}));
+	//Example false case
+	assertEquals("Sample true", true, TwoA.allDistinct(new int[] {1,2,3,4,5,6}));
+	//Example true case
     } //test_allDistinct
 
+    @Test
     void test_reverseInts(void) {
-	
+	assertEquals("Sample", new int[] {6,5,4,3,2,1}, TwoA.reverseInts(new int[] {1,2,3,4,5,6}));
+	//Example case
     } //test_reverseInts
 
 } //TestTwoA

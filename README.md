@@ -1,4 +1,4 @@
-unit-testing-lab
+CSC207 - Homework 2
 ================
 
-CSC-207 lab on Unit Testing -- Due Sept 9
+CSC-207 homework on Unit Testing -- Due Sept 9
